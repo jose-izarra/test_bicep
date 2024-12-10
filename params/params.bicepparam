@@ -2,7 +2,7 @@ using '../main.bicep'
 
 param location = 'North Europe'
 param appServicePlanName = 'jose-asp'
-param keyVaultName = 'jose-kv'
+param keyVaultName = 'jose-kv2'
 param registryName = 'joseACR'
 param webappName = 'jose-webapp'
 param roleAssignments = [
