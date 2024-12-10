@@ -11,7 +11,7 @@ param keyVaultSecretNameAdminUsername string
 #disable-next-line secure-secrets-in-params
 param keyVaultSecretNameAdminPassword0 string
 #disable-next-line secure-secrets-in-params
-param keyVaultSecreNameAdminPassword1 string
+param keyVaultSecretNameAdminPassword1 string
 
 resource containerRegistry 'Microsoft.ContainerRegistry/registries@2023-07-01' = {
   name: registryName
@@ -48,8 +48,8 @@ resource secretAdminUserPassword0 'Microsoft.KeyVault/vaults/secrets@2023-02-01'
 }
 
 // create a secret to store the container registry admin password 1
-resource secretAdminUserPassword1 'Microsoft.KeyVault/vaults/secrets@2023-02-01' = if (!empty(keyVaultSecreNameAdminPassword1)) {
-  name: !empty(keyVaultSecreNameAdminPassword1) ? keyVaultSecreNameAdminPassword1 : 'dummySecret'
+resource secretAdminUserPassword1 'Microsoft.KeyVault/vaults/secrets@2023-02-01' = if (!empty(keyVaultSecretNameAdminPassword1)) {
+  name: !empty(keyVaultSecretNameAdminPassword1) ? keyVaultSecretNameAdminPassword1 : 'dummySecret'
   parent: adminCredentialsKeyVault
   properties: {
     value: containerRegistry.listCredentials().passwords[1].value
