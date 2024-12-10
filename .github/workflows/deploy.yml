@@ -38,5 +38,5 @@ jobs:
             subscriptionId: ${{ env.SUBSCRIPTION_ID }}
             resourceGroupName: ${{ env.RESOURCE_GROUP }}
             template: main.bicep
-            parameters: parameters/params.bicepparam
+            parameters: params/params.bicepparam
             deploymentName: ${{ env.USER_ALIAS }}
