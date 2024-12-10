@@ -61,7 +61,7 @@ module acr './modules/container-registry.bicep' = {
     sku: sku
     keyVaultResourceId: keyvault.outputs.resourceId
     keyVaultSecretNameAdminUsername: keyVaultSecretNameAdminUsername
-    keyVaultSecretNameAdminPassword0: keyvaultSecretNameAdminPassword0
+    keyVaultSecretNameAdminPassword0: keyVaultSecretNameAdminPassword0
     keyVaultSecretNameAdminPassword1: keyVaultSecretNameAdminPassword1
   }
 }
