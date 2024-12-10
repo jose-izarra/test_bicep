@@ -20,7 +20,6 @@ param sku string = 'standard'
 @description('Role assignment for the Key Vault')
 param roleAssignments array
 
-
 var builtInRoleNames = {
   Contributor: subscriptionResourceId(
     'Microsoft.Authorization/roleDefinitions',
@@ -80,7 +79,6 @@ var builtInRoleNames = {
   )
 }
 
-
 // Key Vault Resource
 resource keyVault 'Microsoft.KeyVault/vaults@2022-07-01' = {
   name: keyVaultName
@@ -112,7 +110,6 @@ resource kv_roleAssignments 'Microsoft.Authorization/roleAssignments@2022-04-01'
     scope: keyVault
   }
 ]
-
 // Outputs
 @description('The resource ID of the key vault.')
 output resourceId string = keyVault.id

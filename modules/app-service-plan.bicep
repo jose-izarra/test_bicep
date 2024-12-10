@@ -3,7 +3,6 @@ param appServicePlanName string
 @description('Location of the Azure App Service Plan')
 param location string = resourceGroup().location
 @description('SKU Object for the Azure App Service Plan')
-
 param sku object = {
   capacity: 1
   family: 'B'
