@@ -1,10 +1,10 @@
 using '../main.bicep'
 
 param location = 'North Europe'
-param appServicePlanName = 'jose-asp'
+param appServicePlanName = 'jose-asp2'
 param keyVaultName = 'jose-kv2'
-param registryName = 'joseACR'
-param webappName = 'jose-webapp'
+param registryName = 'joseACR2'
+param webappName = 'jose-webapp2'
 param roleAssignments = [
   {
     principalId: '25d8d697-c4a2-479f-96e0-15593a830ae5' // BCSAI2024-DEVOPS-STUDENTS-A-SP
